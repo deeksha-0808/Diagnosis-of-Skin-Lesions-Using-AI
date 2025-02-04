@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Skin Lesion Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <h1>Automated Skin Lesion Detection</h1>
+        <p>Empowering healthcare with AI-driven insights</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Upload Your Skin Lesion Image</h2>
+            <form action="/classify" method="POST" enctype="multipart/form-data" class="upload-form">
+                <input type="text" name="name" placeholder="Enter your name" required class="input-field">
+                <input type="text" name="contact" placeholder="Enter your contact number" required class="input-field">
+                <input type="file" name="image" required class="input-field">
+                <input type="submit" value="Classify" class="submit-btn">
+            </form>
+
+            {% if pred %}
+            <div class="result">
+                <h3>Patient Name: {{ name }}</h3>
+                <h3>Contact Number: {{ contact }}</h3>
+                <h3>Prediction: {{ pred }}</h3>
+                <h3>Analysis:</h3>
+                <p>{{ analysis }}</p>
+                <h3>Uploaded Image:</h3>
+                <img src="{{ url_for('static', filename='uploads/' + image_filename) }}" alt="Uploaded Image" class="uploaded-img">
+            </div>
+            {% endif %}
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Automated Skin Lesion Detection | 2024</p>
+    </footer>
+</body>
+</html>
