@@ -33,6 +33,8 @@ User uploads an image of a skin lesion.<br>
 The system processes the image and feeds it into a trained AI model.<br>
 The model classifies the lesion as benign or malignant.<br>
 The result is displayed, along with a recommendation for further action.<br><br>
+**Data Privacy Notice : <br><br>
+This project utilizes real patient images for training the AI model. Due to privacy and ethical considerations, the dataset is not included in the GitHub repository. If you wish to use or contribute to the dataset, please ensure compliance with privacy regulations and obtain the necessary permissions. For demonstration purposes, a sample dataset with anonymized images may be used.**<br><br>
 **Future Enhancements :**<br>
 Improve model accuracy with additional training data.<br>
 Deploy on cloud platforms (e.g., AWS, Google Cloud).<br>
