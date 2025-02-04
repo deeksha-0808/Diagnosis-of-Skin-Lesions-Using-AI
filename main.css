@@ -1,0 +1,159 @@
+/* Base colors */
+.first-color {
+    background: #ececec; 
+}
+
+.second-color {
+    background: #2e544b;
+}
+
+.third-color {
+    background: #385170;
+}
+
+.fourth-color {
+    background: #142d4c;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and container */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #ececec;
+    color: #333;
+    padding: 40px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transform: scale(0.98);
+    animation: fadeIn 2s ease-out;
+}
+
+h1, h2, h3 {
+    color: #142d4c;
+    font-family: 'Helvetica', sans-serif;
+}
+
+header h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+header p {
+    text-align: center;
+    font-size: 18px;
+    color: #51af99;
+    margin-bottom: 50px;
+}
+
+/* Form styling */
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-field {
+    padding: 15px;
+    border: 2px solid #4f7a70;
+    border-radius: 15px;
+    font-size: 18px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #385170;
+}
+
+.submit-btn {
+    background-color: #3d675d;
+    color: #ffffff;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #385170;
+    transform: translateY(-5px);
+}
+
+.submit-btn:active {
+    transform: translateY(2px);
+}
+
+/* Result Section */
+.result {
+    margin-top: 40px;
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1s ease-out;
+}
+
+.result h3 {
+    color: #385170;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.result p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Image Styling */
+.uploaded-img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #385170;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    font-size: 18px;
+    animation: fadeInFooter 2s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInFooter {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
